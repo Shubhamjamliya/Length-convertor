@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Length-Converter</title>
+</head>
+<body>
+    <div class="tool-container">
+        <h1>Length Converter</h1>
+        <div id="lengthInput" class="tool-container-feild-group">
+            <div class="tool-container-feild">
+                <div class="tool-input-group ">
+                    <div class="tool-input-label">
+                        <label for="fromUnit">From:</label>
+                    </div>
+                    <select class="tool-select-group" id="fromUnit">
+                        <option selected value="Millimeter">Millimeter</option>
+                        <option value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input placeholder="Input Length" id="fromLength" type="number" name="from-length" min="0" class="tool-input-feild">
+                </div>
+                
+                <div class="tool-input-group">
+                    <div class="tool-input-label">
+                        <label for="toUnit">To:</label>
+                    </div>
+                    <select class="tool-select-group" id="toUnit">
+                        <option value="Millimeter">Millimeter</option>
+                        <option selected value="Centimeter">Centimeter</option>
+                        <option value="Decimeter">Decimeter</option>
+                        <option value="Meter">Meter</option>
+                        <option value="Kilometer">Kilometer</option>
+                        <option value="Foot">Foot</option>
+                        <option value="Inch">Inch</option>
+                        <option value="Mile">Mile</option>
+                        <option value="Yard">Yard</option>
+                    </select>
+                    <input readonly placeholder="Output" id="outputLength" type="number" name="to-temperature" min="0" class="tool-input-feild readonly-background">
+                </div>
+
+                <div class="tool-input-group">
+                    <button onclick="RestLengthConverter()" class="tool-btn tool-btn-reset">Reset</button>
+                    <button onclick="CalculateLength()" class="tool-btn tool-btn-calculate">Calculate</button>
+                </div>
+   
+                <!-- RESULT FIELD -->
+                <div class="tool-container-feild basic">
+                    <h2>Result</h2>
+                    <div id="OutputInfo" class="tool-output-information tool-output-box">
+                       
+                      </div>  
+    
+                    <div id="OutputResult" class="tool-output-results tool-output-box">
+                        <p id="lengthResult"></p>
+                        <p><b>Formula:</b> <span id="lengthFormula"></span></p>
+                    </div>
+                </div>
+
+                <!--Acoordian -->
+                <div style="margin-top: 15px;" class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      BASIC INFORMATION
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>1 millimeter (mm) = 1 millimeter (mm)</li>
+                            <li>10 millimeters (mm) = 1 centimeter (cm)</li>
+                            <li>100 millimeters (mm) = 1 decimeter (dm)</li>
+                            <li>1000 millimeters (mm) = 1 meter (m)</li>
+                            <li>1000000 millimeters (mm) = 1 kilometer (km)</li>
+                            <li>304.8 millimeters (mm) = 1 foot (ft)</li>
+                            <li>25.4 millimeters (mm) = 1 inch (in)</li>
+                            <li>1609344 millimeters (mm) = 1 mile (mi)</li>
+                            <li>914.4 millimeters (mm) = 1 yard (yd)</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                
+           
+            </div>   
+    </div>
+
+    <script src="lengthFormula.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+</body>
+</html>
